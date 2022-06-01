@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cartas - Vincent Van Web</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"></head>
+    <script src="https://kit.fontawesome.com/9bd598b19c.js" crossorigin="anonymous"></script>
+<body>
+    <header>
+        <div class="header-logo" ><a href="index.html"> <img src="img/logo.jpg" alt="icono logo- retrato de Vincent"></a></div>
+     <nav class="header-menubar" >
+        <ul>
+            <li><a href="index.html">Home</a> </li>
+            <li><a href="about.html">Sobre el pintor</a></li>
+            <li><a href="obras.html">Obras</a> </li>
+            <li><a href="form.html">Cartas a Van Gogh</a></li> 
+        </ul>
+    </nav>
+</header>
+<main class="main-carta">
+    <h1>Cartas a Van Gogh</h1>
+    <div>
+        <p> Así como Vincent le enviaba <a class="hip-cartas" href="https://www.cuspide.com/9789871165391/Cartas+A+Theo">cartas a su hermano Theo</a>, en esta sección te damos la posibilidad de escribirle una carta a alguno de los dos hermanos.
+            <br> Si deseas enviar una carta a alguno de los hermanos, completa los campos a continuación:
+        </p>
+
+        <form name="fvalida" action="">
+            <label for="nombre"> Nombre:</label> <input type="text" name="nombre" size="30" maxlength="10"  placeholder="Ingrese su nombre aqui...">  <br><br>
+            <label for="apellido">Apellido:</label><input type="text" name="apellido" size="30" maxlength="10"  placeholder="Ingrese su apellido aqui...">
+            <br><br>
+            <label for="destinatario"> Seleccione el destinatario de su carta:</label>
+            <select name="destinatario">
+                    <option>Vincent Van Gogh</option>
+                    <option>Theodorus Van Gogh</option>
+            </select>
+<br><br>
+<label for="carta"> Cuerpo de la carta: </label>
+            <br> <textarea class="carta-form" name="comentario" rows="10" cols="50"  placeholder="Escriba su carta aqui..."></textarea>
+            <br>
+            
+            <br><input type="button" value="Enviar" onclick="valida_envia()">
+            <br>
+            <br>
+        </form>
+        
+    </div>
+    <script>
+        //Validación de un formulario con Javascript
+        //Fuente: https://desarrolloweb.com/articulos/1767.php
+        function valida_envia() {
+            //valido el nombre
+            if (document.fvalida.nombre.value.length == 0) {
+                alert("Tiene que escribir su nombre")
+                document.fvalida.nombre.focus()
+                return 0;
+            }
+
+            //valido el apellido
+            if (document.fvalida.apellido.value.length == 0) {
+                alert("Tiene que escribir su apellido")
+                document.fvalida.nombre.focus()
+                return 0;
+            }
+
+             //valido carta
+             if (document.fvalida.comentario.value.length == 0) {
+                alert("No puede enviar una carta vacia")
+                document.fvalida.nombre.focus()
+                return 0;
+            }
+         
+            //el formulario se envia
+            alert("¡Muchas gracias por escribir esta carta!");
+            document.fvalida.submit();
+        }
+        
+    </script>
+
+
+</main>
+<footer>
+    <a href="https://www.instagram.com/vangoghmuseum/?hl=es" class="icon-footer"><i class="fa-brands fa-instagram"></i></a> 
+    <a href="https://twitter.com/vangoghartist?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class="icon-footer"><i class="fa-brands fa-twitter"></i></a>
+    <a href="https://www.facebook.com/vincentwillemvangogh/" class="icon-footer"><i class="fa-brands fa-facebook"></i></a>
+<p>© 2022 - Trabajo Práctico Codo a Codo - Hecho por A. Pierucci</p>
+
+</footer>
+</body>
+</html>

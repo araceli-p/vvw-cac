@@ -1,0 +1,367 @@
+*{
+    padding: 0;
+box-sizing: border-box;
+}
+
+html{
+    font-size: 1rem;
+    height: 100%;
+
+}
+
+body,header,main,footer {
+   /*border: 3px burlywood solid;  */
+min-height: 50px;
+margin: 0rem;
+min-width: 400px;
+font-family: 'Roboto', sans-serif, Arial, Helvetica;
+}
+
+header{
+    background-color: black;
+    box-shadow: 0 0 1rem rgb(0,25,25 );
+    font: menu;
+   
+}
+
+body{
+    background-color: whitesmoke;
+}
+
+main {
+    background-color: white;
+    min-height: 5rem;
+    padding: 0%;
+}
+
+footer {
+    background-color: black;
+    box-shadow: 0 0 1rem rgb(0,25,25 );
+    font: menu;
+    color: white;
+    
+    text-align: center;
+    margin-top: 0rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+
+footer i
+{margin-left: 1rem;}
+
+/*Logo y menu */
+.header-logo {
+width: auto;
+display: inline-block;
+margin: 0.5rem;
+margin-left: 1rem;
+}
+
+.header-logo img{
+    width: 4rem;
+}
+
+.header-menubar {
+    left: auto;
+    position: relative;
+    top:auto;
+    width: auto;
+    display: inline-block;
+    margin: 0rem 0.5rem 0rem 0.5rem;
+
+}
+
+.header-menubar ul{
+    list-style: none;
+}
+
+.header-menubar li{
+    float:left;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 1rem 1.2rem;
+}
+
+.header-menubar a {
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 1.1rem;
+}
+.header-menubar a:hover {
+    color:darkorange;
+    background-color: rgb(27, 27, 27);
+}
+
+.header-menubar li a {
+    font-size: 1.2rem;
+}
+
+/*@media only screen and (max-width: 700px) {
+.header-menubar
+  { }
+
+}*/
+
+
+
+/*Footer e icons*/
+
+
+i {
+    /*margin: 0.5rem;*/
+    color: white;
+    font-size: 2rem;
+    width: 2rem;
+}
+
+
+footer i:hover {
+    color:darkorange;
+}
+
+/*Cartas*/
+.hip-cartas {
+    text-decoration:none;
+        color: black;
+    
+}
+
+.hip-cartas:hover {
+    color:darkorange;
+
+}
+
+/*About*/
+.obra {
+    width: 100%;
+ }
+
+
+ .la-bio
+ {
+  /* width: 70%;*/
+  width: auto;
+   padding: 5px;
+   /*background-color: rgb(90, 99, 112);*/
+   min-width: 250px;
+   margin-left: 2rem;
+   margin-right: 4rem;
+
+}
+ h1.la-bio
+ {
+     font-size: 2rem;}
+
+p.la-bio
+{
+    font-size: 1rem;
+    text-align: justify;
+    letter-spacing: normal;
+}
+
+.pic-bio 
+ {
+    float: right;
+  width: 25%;
+  padding: 5px;
+ /* margin-right: 1rem;*/
+ margin: 0rem 1rem 1rem 1.5rem;
+  
+   background-color: rgb(90, 99, 112);
+  min-width: 250px;
+}
+
+.pic-bio:hover 
+{  
+ 
+    transform: scale(1.1);
+}
+.natal 
+{ position: relative;
+    top:60%;
+
+ width: 50%;
+ padding: 5px;
+ margin-left: 2rem;
+ margin-bottom: 1rem;  
+}
+
+
+.natal iframe{
+    background-color: rgb(90, 99, 112);
+    min-width: 250px;
+    max-width: 500px;
+}
+
+
+
+
+/*Index*/
+.carrussel ul {
+    list-style:nones;
+margin:0;
+padding:0;
+scroll-behavior: smooth;
+}
+.carrussel-fotos
+{
+  display:flex;
+    gap: 0.1rem;
+    overflow:auto;
+   /* background-color: rgb(5, 5, 63);*/
+}
+.carrussel-fotos img{
+    width: 90em;
+    max-height: 30rem;
+    height: 100%;
+}
+
+@media (min-width: 500px) {
+    .carrussel-fotos
+        {
+            overflow:hidden;
+        }
+}
+
+.carrussel{
+    position: absolute;
+    /*display: inline-block;*/
+
+}
+.texto-encima{
+    position: absolute;
+    top: 68%;
+    
+    color: aliceblue;
+    background-color: black ;
+    opacity: 80%;
+    width: 100%;
+    padding: 3%;
+}
+
+.texto-titulo{
+    position: absolute;
+    top: 20%;
+    left: 10px;
+    background-color: black 80%;
+    color: white;
+}
+
+/*Cartas*/
+
+.main-carta
+{/*padding:0.5rem;*/
+padding-left: 1rem;}
+
+figure
+{margin:2rem;
+    padding-left: 3rem ;
+display: inline-block;
+position: relative;
+/*border: 1px red solid;*/}
+
+figcaption {
+    display: none;
+    position:absolute;
+    right:0;
+bottom: 2px;
+color: aliceblue;
+background-color: black ;
+opacity: 80%;
+width: 86%;
+padding: 3%;
+}
+
+figure:hover figcaption
+{
+    display: block;
+}
+
+
+
+/*.obra-1 , .obra-2 , .obra-3 
+{
+  /*float: left;*/
+ /* width: 33%;
+  
+
+    /*object-fit: contain;
+  /*  padding: 0.5rem;*/
+
+
+.obra-1 img, .obra-2 img, .obra-3 img
+{max-height: 15rem;
+width: auto;}
+
+.main-obras
+{
+    margin-bottom: 2rem;
+    padding-left: 2rem;
+}
+
+.texto-titulo-obras
+{ padding-top: 0.5rem;
+color: black;
+font-size: 1.75rem;
+}
+.texto-obras{
+    color: black;
+    font-size: 1.1rem;
+    font-style: normal;
+}
+
+/*Responsive about*/
+
+.footer-cel
+{display: none;}
+
+  @media only screen and (max-width: 800px) {
+    .pic-bio {
+        display:none
+    }
+    .header-logo
+    {display: none;}
+
+    footer p {
+        
+        font-size: 1rem;
+        text-align: center;
+    }
+    .footer-normal
+    {display: none}
+    .footer-cel
+    {display: inline;}
+  }
+ 
+  @media only screen and (max-width: 500px) {
+    .natal {
+        display:none
+    }
+    
+    .main-obras
+{
+    margin-bottom: 0.5rem;
+    padding-left: 0rem;
+}
+.main-carta
+{padding: 0;}
+.main-obras
+{padding: 0;
+margin: 0;}
+
+figure
+{margin:0.5rem;
+}
+
+.la-bio
+ {
+ 
+   padding: 0px;
+ 
+   margin-left: 1rem;
+   margin-right: 1rem;
+
+}
+  }
